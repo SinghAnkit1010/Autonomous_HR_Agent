@@ -22,13 +22,10 @@ RUN pip install langchain-community==0.3.24
 RUN pip install langchain-core==0.3.63
 RUN pip install langchain-experimental==0.3.4
 RUN pip install langchain-google-community==2.0.7
-RUN pip install langchain-huggingface==0.1.2
 RUN pip install langchain-openai==0.3.7
 RUN pip install langchain-text-splitters==0.3.8
-RUN pip install langgraph-checkpoint==2.0.26
 RUN pip install langgraph-prebuilt==0.2.2
 RUN pip install langgraph-sdk==0.1.70
-RUN pip install lxml==5.4.0
 RUN pip install numpy==2.2.3
 RUN pip install oauthlib==3.2.2
 RUN pip install openai==1.64.0
