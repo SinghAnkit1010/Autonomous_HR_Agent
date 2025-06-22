@@ -1,11 +1,11 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from dotenv import load_dotenv
-from src.create_jd import jd_create
-from src.linkedin_post import post_jd_on_linkedin
+from create_jd import jd_create
+from linkedin_post import post_jd_on_linkedin
 from resume_selection import select_send_email
-from src.question_generation import generate_questions
-from src.linkedin_auth import router as linkedin_router
+from question_generation import generate_questions
+from linkedin_auth import router as linkedin_router
 from fastapi.responses import JSONResponse
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
