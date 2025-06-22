@@ -46,6 +46,7 @@ RUN pip install requests-oauthlib==2.0.0
 RUN pip install rsa==4.9.1
 RUN pip install scikit-learn==1.6.1
 RUN pip install scipy==1.15.2
+RUN pip install torch==2.1.2 torchvision==0.16.2 torchaudio==2.1.2
 RUN pip install sentence-transformers==3.4.1
 RUN pip install starlette==0.46.2
 RUN pip install transformers==4.49.0
@@ -53,8 +54,6 @@ RUN pip install uritemplate==4.1.1
 RUN pip install urllib3==2.3.0
 RUN pip install uvicorn==0.34.3
 RUN pip install Werkzeug==3.1.3
-
-
 
 COPY . .
 
