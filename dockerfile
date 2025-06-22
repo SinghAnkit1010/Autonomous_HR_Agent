@@ -1,0 +1,85 @@
+FROM python:3.11-slim
+
+WORKDIR /HR_AGENT
+
+RUN pip install annotated-types==0.7.0
+RUN pip install anyio==4.8.0
+RUN pip install attrs==25.1.0
+RUN pip install cachetools==5.5.2
+RUN pip install charset-normalizer==3.4.1
+RUN pip install click==8.2.1
+RUN pip install dataclasses-json==0.6.7
+RUN pip install duckduckgo_search==8.0.2
+RUN pip install faiss-cpu==1.10.0
+RUN pip install fastapi==0.115.12
+RUN pip install google-api-core==2.24.2
+RUN pip install google-api-python-client==2.170.0
+RUN pip install google-auth==2.40.2
+RUN pip install google-auth-httplib2==0.2.0
+RUN pip install google-auth-oauthlib==1.2.2
+RUN pip install google-cloud-core==2.4.3
+RUN pip install google-search-results==2.4.2
+RUN pip install httpcore==1.0.7
+RUN pip install httplib2==0.22.0
+RUN pip install httpx==0.28.1
+RUN pip install httpx-sse==0.4.0
+RUN pip install huggingface-hub==0.29.1
+RUN pip install langchain==0.3.25
+RUN pip install langchain-community==0.3.24
+RUN pip install langchain-core==0.3.63
+RUN pip install langchain-experimental==0.3.4
+RUN pip install langchain-google-community==2.0.7
+RUN pip install langchain-huggingface==0.1.2
+RUN pip install langchain-openai==0.3.7
+RUN pip install langchain-pinecone==0.2.5
+RUN pip install langchain-text-splitters==0.3.8
+RUN pip install langgraph==0.4.7
+RUN pip install langgraph-checkpoint==2.0.26
+RUN pip install langgraph-prebuilt==0.2.2
+RUN pip install langgraph-sdk==0.1.70
+RUN pip install langsmith==0.3.43
+RUN pip install lxml==5.4.0
+RUN pip install marshmallow==3.26.1
+RUN pip install numpy==2.2.3
+RUN pip install oauthlib==3.2.2
+RUN pip install openai==1.64.0
+RUN pip install orjson==3.10.15
+RUN pip install ormsgpack==1.10.0
+RUN pip install packaging==24.2
+RUN pip install pandas==2.2.3
+RUN pip install pinecone==6.0.1
+RUN pip install pinecone-plugin-interface==0.0.7
+RUN pip install pydantic==2.10.6
+RUN pip install pydantic-settings==2.8.1
+RUN pip install pypdf==5.4.0
+RUN pip install python-dateutil==2.9.0.post0
+RUN pip install python-dotenv==1.0.1
+RUN pip install python-multipart==0.0.20
+RUN pip install pytz==2025.1
+RUN pip install PyYAML==6.0.2
+RUN pip install regex==2024.11.6
+RUN pip install requests==2.32.3
+RUN pip install requests-oauthlib==2.0.0
+RUN pip install rsa==4.9.1
+RUN pip install safetensors==0.5.3
+RUN pip install scikit-learn==1.6.1
+RUN pip install scipy==1.15.2
+RUN pip install sentence-transformers==3.4.1
+RUN pip install starlette==0.46.2
+RUN pip install tenacity==9.0.0
+RUN pip install tokenizers==0.21.0
+RUN pip install tqdm==4.67.1
+RUN pip install transformers==4.49.0
+RUN pip install uritemplate==4.1.1
+RUN pip install urllib3==2.3.0
+RUN pip install uvicorn==0.34.3
+RUN pip install Werkzeug==3.1.3
+RUN pip install yarl==1.18.3
+
+
+
+COPY . .
+
+EXPOSE 8000
+
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

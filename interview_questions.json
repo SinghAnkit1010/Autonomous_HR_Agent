@@ -1,0 +1,504 @@
+{
+    "qa_pairs": [
+        [
+            {
+                "question": "What is the main purpose of calculating the transformer embedding for the word 'bank'?",
+                "choices": [
+                    "A. To increase the size of the output embedding",
+                    "B. To nudge the embedding towards words that provide more context",
+                    "C. To decrease the similarity score of the word with itself",
+                    "D. To remove the word 'bank' from the input sequence"
+                ],
+                "answer": "B. To nudge the embedding towards words that provide more context"
+            },
+            {
+                "question": "Why do words that provide little context, such as 'a' and 'man', have very small weights in the calculation of the transformer embedding?",
+                "choices": [
+                    "A. To increase their influence on the output embedding",
+                    "B. To ensure they are included in the output embedding",
+                    "C. To minimize their influence on the output embedding",
+                    "D. To adjust their similarity scores with other words"
+                ],
+                "answer": "C. To minimize their influence on the output embedding"
+            },
+            {
+                "question": "How does the weighting of words in the calculation of the transformer embedding affect the output embedding?",
+                "choices": [
+                    "A. It has no impact on the output embedding",
+                    "B. It increases the randomness of the output embedding",
+                    "C. It moves the output embedding away from the original embedding",
+                    "D. It pulls the output embedding closer to regions of vector space occupied by words that provide more context"
+                ],
+                "answer": "D. It pulls the output embedding closer to regions of vector space occupied by words that provide more context"
+            }
+        ],
+        [
+            {
+                "question": "Based on the given results, which model suffers the most from overfitting?",
+                "choices": [
+                    "A) Train Error = 20% and Validation Error = 22%",
+                    "B) Train Error = 1% and Validation Error = 15%",
+                    "C) Train Error = 0.5% and Validation Error = 1%",
+                    "D) Train Error = 20% and Validation Error = 30%"
+                ],
+                "answer": "D) Train Error = 20% and Validation Error = 30%"
+            },
+            {
+                "question": "What is the difference between high variance and high bias in a neural network model?",
+                "choices": [
+                    "A) High variance results in overfitting while high bias causes underfitting",
+                    "B) High variance causes underfitting while high bias results in overfitting",
+                    "C) High variance and high bias both result in overfitting",
+                    "D) High variance and high bias both result in underfitting"
+                ],
+                "answer": "A) High variance results in overfitting while high bias causes underfitting"
+            },
+            {
+                "question": "How can the issue of overfitting in a neural network model be addressed?",
+                "choices": [
+                    "A) By increasing the model complexity",
+                    "B) By introducing more noise in the training data",
+                    "C) By using regularization techniques such as dropout",
+                    "D) By using a smaller validation set"
+                ],
+                "answer": "C) By using regularization techniques such as dropout"
+            }
+        ],
+        [
+            {
+                "question": "What is the major drawback of static embeddings?",
+                "choices": [
+                    "A) Lack of computational efficiency",
+                    "B) Lack of polysemous words representation",
+                    "C) Lack of training data",
+                    "D) Lack of application in NLP"
+                ],
+                "answer": "B) Lack of polysemous words representation"
+            },
+            {
+                "question": "Why are polysemous words encoded ambiguously in static embeddings?",
+                "choices": [
+                    "A) Due to lack of computational power",
+                    "B) Due to lack of contextual information",
+                    "C) Due to lack of training examples",
+                    "D) Due to lack of expertise in NLP"
+                ],
+                "answer": "B) Due to lack of contextual information"
+            },
+            {
+                "question": "What happens to static embeddings with words like 'bank' that have multiple meanings?",
+                "choices": [
+                    "A) They are precisely represented",
+                    "B) They are ignored in the model",
+                    "C) They have ambiguous representations",
+                    "D) They are omitted from the training data"
+                ],
+                "answer": "C) They have ambiguous representations"
+            }
+        ],
+        [
+            {
+                "question": "What is the purpose of the 'MAX_LENGTH = 5' line of code in the given content?",
+                "choices": [
+                    "A. Set the maximum length for the input matrix",
+                    "B. Define the number of dimensions in the embedding space",
+                    "C. Establish the number of words to be embedded",
+                    "D. Specify the length for positional encoding"
+                ],
+                "answer": "D. Specify the length for positional encoding"
+            },
+            {
+                "question": "How does the 'PositionalEncoder' class impact the input matrix 'input' in the given content?",
+                "choices": [
+                    "A. Adds random noise to the input matrix",
+                    "B. Applies a defined algorithm to the input matrix",
+                    "C. Filters out certain elements from the input matrix",
+                    "D. Sorts the input matrix in ascending order"
+                ],
+                "answer": "B. Applies a defined algorithm to the input matrix"
+            },
+            {
+                "question": "Based on the provided code snippets, what is the significance of the 'ROUNDING' variable?",
+                "choices": [
+                    "A. Determines the number of layers in the neural network",
+                    "B. Controls the precision of the floating-point values",
+                    "C. Sets the learning rate for the positional encoding algorithm",
+                    "D. Measures the computational complexity of the model"
+                ],
+                "answer": "B. Controls the precision of the floating-point values"
+            }
+        ],
+        [
+            {
+                "question": "What is Bluesky?",
+                "choices": [
+                    "A. A social networking platform",
+                    "B. A publication for data science professionals",
+                    "C. A music streaming service",
+                    "D. A weather forecasting app"
+                ],
+                "answer": "B. A publication for data science professionals"
+            },
+            {
+                "question": "What types of professionals is Bluesky primarily aimed at?",
+                "choices": [
+                    "A. Marketing executives",
+                    "B. Data science, data analytics, data engineering, machine learning, and AI professionals",
+                    "C. Medical doctors",
+                    "D. Architects"
+                ],
+                "answer": "B. Data science, data analytics, data engineering, machine learning, and AI professionals"
+            },
+            {
+                "question": "In what year was Insight Media Group, LLC established?",
+                "choices": [
+                    "A. 2020",
+                    "B. 2022",
+                    "C. 2023",
+                    "D. 2025"
+                ],
+                "answer": "D. 2025"
+            }
+        ],
+        [
+            {
+                "question": "Which two classical methods are suggested to explore further in image segmentation?",
+                "choices": [
+                    "A. Watershed Algorithm and Extraction of Connected Components",
+                    "B. Feature Extraction and Deep Learning",
+                    "C. Edge Detection and Histogram Equalization",
+                    "D. Template Matching and Optical Character Recognition"
+                ],
+                "answer": "A. Watershed Algorithm and Extraction of Connected Components"
+            },
+            {
+                "question": "Where are the images used for experiments in this post sourced from?",
+                "choices": [
+                    "A. Unsplash.com",
+                    "B. Shutterstock.com",
+                    "C. Getty Images",
+                    "D. Pixabay.com"
+                ],
+                "answer": "A. Unsplash.com"
+            },
+            {
+                "question": "Which post should one refer to for more advanced state-of-the-art methods in image segmentation?",
+                "choices": [
+                    "A. Watershed Algorithm and Extraction of Connected Components",
+                    "B. Clustering Based Methods",
+                    "C. Template Matching and Optical Character Recognition",
+                    "D. Edge Detection and Histogram Equalization"
+                ],
+                "answer": "B. Clustering Based Methods"
+            }
+        ],
+        [
+            {
+                "question": "What fundamental idea is mentioned in the text as being coupled with certain embellishments to create powerful results?",
+                "choices": [
+                    "Matrix multiplication",
+                    "Dot product",
+                    "Linear regression",
+                    "Gradient descent"
+                ],
+                "answer": "Dot product"
+            },
+            {
+                "question": "In what field has there been tremendous progress based on Transformers in recent years?",
+                "choices": [
+                    "Genetic engineering",
+                    "Artificial intelligence",
+                    "Quantum computing",
+                    "Biotechnology"
+                ],
+                "answer": "Artificial intelligence"
+            },
+            {
+                "question": "How is the concept of 'Robtimus Prime' referenced in the text?",
+                "choices": [
+                    "As a symbol of technological advancement",
+                    "As a play on words related to Transformers",
+                    "As a character in a popular movie franchise",
+                    "As a coding language used in AI applications"
+                ],
+                "answer": "As a play on words related to Transformers"
+            }
+        ],
+        [
+            {
+                "question": "Which of the following best describes the purpose of the datasets collection mentioned in the topic content?",
+                "choices": [
+                    "Only used for NLP tasks",
+                    "Exclusively for training a single model",
+                    "Training models on a variety of tasks",
+                    "Developed by a single author"
+                ],
+                "answer": "Training models on a variety of tasks"
+            },
+            {
+                "question": "What is the main function of the Model Hub as described in the topic content?",
+                "choices": [
+                    "Repository of outdated models",
+                    "Collection of beginner-level models",
+                    "Repository of cutting-edge models",
+                    "Repository restricted to NLP models only"
+                ],
+                "answer": "Repository of cutting-edge models"
+            },
+            {
+                "question": "In the code snippet provided, what does the 'extract_le' function do?",
+                "choices": [
+                    "Tokenizes an input sequence to produce token IDs",
+                    "Extracts learned embeddings for each token in a sequence",
+                    "Loads a pre-trained model from a file",
+                    "Converts embeddings to tensor format"
+                ],
+                "answer": "Extracts learned embeddings for each token in a sequence"
+            }
+        ],
+        [
+            {
+                "question": "What is the primary function of the self-attention mechanism in text processing?",
+                "choices": [
+                    "A. Generate static word embeddings",
+                    "B. Process each token in an input sequence simultaneously",
+                    "C. Create context-independent token representations",
+                    "D. Extract semantic information from images"
+                ],
+                "answer": "B. Process each token in an input sequence simultaneously"
+            },
+            {
+                "question": "How do transformer embeddings differ from static word embeddings like word2vec?",
+                "choices": [
+                    "A. Transformer embeddings are only used for images",
+                    "B. Transformer embeddings are context-aware and generated simultaneously for all tokens",
+                    "C. Transformer embeddings are static and not influenced by context",
+                    "D. Transformer embeddings are focused on syntactic analysis"
+                ],
+                "answer": "B. Transformer embeddings are context-aware and generated simultaneously for all tokens"
+            },
+            {
+                "question": "Which significant advancements in language models have been made possible by the self-attention mechanism?",
+                "choices": [
+                    "A. Development of traditional rule-based systems",
+                    "B. Creation of static language representations",
+                    "C. Enhancing the capabilities of models like BERT and GPT",
+                    "D. Restricting the processing of individual tokens"
+                ],
+                "answer": "C. Enhancing the capabilities of models like BERT and GPT"
+            }
+        ],
+        [
+            {
+                "question": "Which type of regularization technique aims to constrain the model's weights to be smaller or shrink some of them to 0?",
+                "choices": [
+                    "A) L3 Regularization",
+                    "B) L1 Regularization",
+                    "C) L4 Regularization",
+                    "D) L5 Regularization"
+                ],
+                "answer": "B) L1 Regularization"
+            },
+            {
+                "question": "In which cases are L1 and L2 regularizations used?",
+                "choices": [
+                    "A) Cases 1 and 3",
+                    "B) Cases 2 and 4",
+                    "C) Cases 5 and 7",
+                    "D) Cases 6 and 8"
+                ],
+                "answer": "B) Cases 2 and 4"
+            },
+            {
+                "question": "What is the purpose of L1 and L2 regularization in high-variance neural networks?",
+                "choices": [
+                    "A) Increase overfitting",
+                    "B) Prevent underfitting",
+                    "C) Control bias",
+                    "D) Prevent overfitting"
+                ],
+                "answer": "D) Prevent overfitting"
+            }
+        ],
+        [
+            {
+                "question": "What is the purpose of the 'max_length' parameter in the transformer?",
+                "choices": [
+                    "A. Determines the size of the query matrix",
+                    "B. Determines the size of the positional encoding matrix",
+                    "C. Sets the number of encoder layers",
+                    "D. Controls the learning rate"
+                ],
+                "answer": "B. Determines the size of the positional encoding matrix"
+            },
+            {
+                "question": "How does the 'rounding' parameter impact the output positional encoding matrix?",
+                "choices": [
+                    "A. Determines the number of dimensions in each row",
+                    "B. Controls the number of transformer heads",
+                    "C. Specifies the number of decimal places for rounding values",
+                    "D. Sets the batch size for training"
+                ],
+                "answer": "C. Specifies the number of decimal places for rounding values"
+            },
+            {
+                "question": "What is the size of the output matrix generated by the 'generate_positional_encoding' function?",
+                "choices": [
+                    "A. (max_length X d_model)",
+                    "B. (max_length X max_length)",
+                    "C. (embedding_dim X embedding_dim)",
+                    "D. (d_model X d_model)"
+                ],
+                "answer": "A. (max_length X d_model)"
+            }
+        ],
+        [
+            {
+                "question": "What is the value of the first element in the learned embedding vector for 'bank'?",
+                "choices": [
+                    "A) -0.03",
+                    "B) 0.15",
+                    "C) 0.27",
+                    "D) -0.06"
+                ],
+                "answer": "A) -0.03"
+            },
+            {
+                "question": "Based on the transformer embedding vectors provided, which sentence has the highest value in the third element?",
+                "choices": [
+                    "A) Learned embedding",
+                    "B) Transformer embedding (sentence 1)",
+                    "C) Transformer embedding (sentence 2)",
+                    "D) Cannot be determined"
+                ],
+                "answer": "C) Transformer embedding (sentence 2)"
+            },
+            {
+                "question": "If a new sentence embedding vector for 'bank' needs to be created using the mean of the provided transformer embeddings, what would be the value of the first element?",
+                "choices": [
+                    "A) 0.13",
+                    "B) 0.21",
+                    "C) 0.21",
+                    "D) -0.03"
+                ],
+                "answer": "A) 0.13"
+            }
+        ],
+        [
+            {
+                "question": "What are the three parts of the Softmax step in a Transformer network?",
+                "choices": [
+                    "A) Multiply, subtract, divide",
+                    "B) Raise to power, sum across columns, normalize",
+                    "C) Add, divide, round",
+                    "D) Sum, average, concatenate"
+                ],
+                "answer": "B) Raise to power, sum across columns, normalize"
+            },
+            {
+                "question": "Why is it important to normalize each column in the Softmax step?",
+                "choices": [
+                    "A) To decrease computational complexity",
+                    "B) To eliminate outliers",
+                    "C) To create a probability distribution of attention",
+                    "D) To reduce memory usage"
+                ],
+                "answer": "C) To create a probability distribution of attention"
+            },
+            {
+                "question": "What is the purpose of raising e to the power of the number in each cell in the Softmax step?",
+                "choices": [
+                    "A) To round the numbers",
+                    "B) To perform a power transform",
+                    "C) To calculate the Neural Network loss function",
+                    "D) To enhance the significance of the value"
+                ],
+                "answer": "B) To perform a power transform"
+            }
+        ],
+        [
+            {
+                "question": "In a complete self-attention block, what is the purpose of the 'query' matrix?",
+                "choices": [
+                    "A. To determine the importance of each word in the input sequence",
+                    "B. To store the information of the input sequence",
+                    "C. To compute the dot product with the key matrix",
+                    "D. To generate the final output sequence"
+                ],
+                "answer": "A. To determine the importance of each word in the input sequence"
+            },
+            {
+                "question": "How does the analogy of 'query' with databases help understand its function in a self-attention block?",
+                "choices": [
+                    "A. By associating it with data retrieval in database systems",
+                    "B. By linking it to data storage in databases",
+                    "C. By highlighting its role in mathematical computations",
+                    "D. By emphasizing its role in data processing"
+                ],
+                "answer": "A. By associating it with data retrieval in database systems"
+            },
+            {
+                "question": "What distinguishes the 'query' matrix from the 'key' and 'value' matrices in a self-attention block?",
+                "choices": [
+                    "A. Query is used for computation, while key and value are for storage",
+                    "B. Query focuses on input importance, while key and value handle outputs",
+                    "C. Key and value are interchangeable, while query is unique",
+                    "D. Query determines relevance, while key and value provide context"
+                ],
+                "answer": "D. Query determines relevance, while key and value provide context"
+            },
+            {
+                "question": "Why is it essential to have separate query, key, and value matrices in self-attention mechanisms?",
+                "choices": [
+                    "A. To simplify the algorithm and reduce computational complexity",
+                    "B. To allow for parallel processing and improved performance",
+                    "C. To facilitate different aspects of attention calculation",
+                    "D. To randomize feature extraction and enhance model diversity"
+                ],
+                "answer": "C. To facilitate different aspects of attention calculation"
+            },
+            {
+                "question": "How does understanding the analogy with databases aid in grasping the concept of self-attention?",
+                "choices": [
+                    "A. By clarifying the role of each matrix in information storage and retrieval",
+                    "B. By simplifying the mathematical operations involved in attention mechanisms",
+                    "C. By relating attention mechanisms to memory management in database systems",
+                    "D. By illustrating the impact of database design on neural network architecture"
+                ],
+                "answer": "A. By clarifying the role of each matrix in information storage and retrieval"
+            }
+        ],
+        [
+            {
+                "question": "What method is commonly used to scale the similarity scores in the context of dot product attention?",
+                "choices": [
+                    "A) Multiplying by a constant factor",
+                    "B) Dividing by the square root of dmodel",
+                    "C) Adding a fixed value",
+                    "D) Subtracting the mean score"
+                ],
+                "answer": "B) Dividing by the square root of dmodel"
+            },
+            {
+                "question": "Why is normalisation necessary for the similarity scores in dot product attention?",
+                "choices": [
+                    "A) To increase the scores",
+                    "B) To decrease the computational complexity",
+                    "C) To ensure scores are negative",
+                    "D) To maintain the same scale as input tokens"
+                ],
+                "answer": "B) To decrease the computational complexity"
+            },
+            {
+                "question": "What is the purpose of using the Softmax function when calculating attention weights in transformers?",
+                "choices": [
+                    "A) To harden the attention weights",
+                    "B) To soften the attention distribution",
+                    "C) To introduce randomness",
+                    "D) To ignore certain input tokens"
+                ],
+                "answer": "B) To soften the attention distribution"
+            }
+        ]
+    ]
+}
