@@ -54,6 +54,7 @@ RUN pip install uritemplate==4.1.1
 RUN pip install urllib3==2.3.0
 RUN pip install uvicorn==0.34.3
 RUN pip install Werkzeug==3.1.3
+RUN pip install beautifulsoup4==4.13.4
 
 COPY . .
 

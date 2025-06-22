@@ -2,502 +2,482 @@
     "qa_pairs": [
         [
             {
-                "question": "What is the main purpose of calculating the transformer embedding for the word 'bank'?",
+                "question": "What is the main task when using Vision Transformers (ViT) with images?",
                 "choices": [
-                    "A. To increase the size of the output embedding",
-                    "B. To nudge the embedding towards words that provide more context",
-                    "C. To decrease the similarity score of the word with itself",
-                    "D. To remove the word 'bank' from the input sequence"
+                    "A) Convert an image into pixels",
+                    "B) Convert an image into sentences",
+                    "C) Convert an image into patches",
+                    "D) Convert an image into vectors"
                 ],
-                "answer": "B. To nudge the embedding towards words that provide more context"
+                "answer": "C) Convert an image into patches"
             },
             {
-                "question": "Why do words that provide little context, such as 'a' and 'man', have very small weights in the calculation of the transformer embedding?",
+                "question": "Why is the self-attention mechanism of Transformers leveraged in Vision Transformers (ViT)?",
                 "choices": [
-                    "A. To increase their influence on the output embedding",
-                    "B. To ensure they are included in the output embedding",
-                    "C. To minimize their influence on the output embedding",
-                    "D. To adjust their similarity scores with other words"
+                    "A) To convert images into text",
+                    "B) To process sequential data",
+                    "C) To enhance image quality",
+                    "D) To create pixel-based models"
                 ],
-                "answer": "C. To minimize their influence on the output embedding"
+                "answer": "B) To process sequential data"
             },
             {
-                "question": "How does the weighting of words in the calculation of the transformer embedding affect the output embedding?",
+                "question": "What is the purpose of patchifying the image in Vision Transformers (ViT)?",
                 "choices": [
-                    "A. It has no impact on the output embedding",
-                    "B. It increases the randomness of the output embedding",
-                    "C. It moves the output embedding away from the original embedding",
-                    "D. It pulls the output embedding closer to regions of vector space occupied by words that provide more context"
+                    "A) To flatten each patch",
+                    "B) To apply linear projection",
+                    "C) To split the image into smaller patches",
+                    "D) To resize the image"
                 ],
-                "answer": "D. It pulls the output embedding closer to regions of vector space occupied by words that provide more context"
+                "answer": "C) To split the image into smaller patches"
             }
         ],
         [
             {
-                "question": "Based on the given results, which model suffers the most from overfitting?",
+                "question": "What are some of the more advanced algorithms used in image segmentation?",
                 "choices": [
-                    "A) Train Error = 20% and Validation Error = 22%",
-                    "B) Train Error = 1% and Validation Error = 15%",
-                    "C) Train Error = 0.5% and Validation Error = 1%",
-                    "D) Train Error = 20% and Validation Error = 30%"
+                    "A) k-means, DBSCAN, hierarchical clustering",
+                    "B) active contour, graph cuts, Markov conditional random fields",
+                    "C) decision trees, random forests, gradient boosting",
+                    "D) linear regression, logistic regression, SVM"
                 ],
-                "answer": "D) Train Error = 20% and Validation Error = 30%"
+                "answer": "B) active contour, graph cuts, Markov conditional random fields"
             },
             {
-                "question": "What is the difference between high variance and high bias in a neural network model?",
+                "question": "What are the limitations of traditional skin segmentation techniques using color thresholds?",
                 "choices": [
-                    "A) High variance results in overfitting while high bias causes underfitting",
-                    "B) High variance causes underfitting while high bias results in overfitting",
-                    "C) High variance and high bias both result in overfitting",
-                    "D) High variance and high bias both result in underfitting"
+                    "A) High accuracy, low computational cost",
+                    "B) No false positive errors, robust to lighting conditions",
+                    "C) False positive errors due to low light conditions and similar colored background objects",
+                    "D) Easily adaptable to different color spaces"
                 ],
-                "answer": "A) High variance results in overfitting while high bias causes underfitting"
+                "answer": "C) False positive errors due to low light conditions and similar colored background objects"
             },
             {
-                "question": "How can the issue of overfitting in a neural network model be addressed?",
+                "question": "Which model-based machine learning technique is commonly used for skin segmentation?",
                 "choices": [
-                    "A) By increasing the model complexity",
-                    "B) By introducing more noise in the training data",
-                    "C) By using regularization techniques such as dropout",
-                    "D) By using a smaller validation set"
+                    "A) k-nearest neighbors",
+                    "B) logistic regression",
+                    "C) Bayesian classifier",
+                    "D) decision tree"
                 ],
-                "answer": "C) By using regularization techniques such as dropout"
+                "answer": "C) Bayesian classifier"
             }
         ],
         [
             {
-                "question": "What is the major drawback of static embeddings?",
+                "question": "What is the purpose of scaling the scores by the square root of the dimensionality of the key vectors in the self-attention mechanism?",
                 "choices": [
-                    "A) Lack of computational efficiency",
-                    "B) Lack of polysemous words representation",
-                    "C) Lack of training data",
-                    "D) Lack of application in NLP"
+                    "A) To reduce the computation complexity",
+                    "B) To prevent the gradients from becoming too large during backpropagation",
+                    "C) To increase the model's capacity for memorization",
+                    "D) To speed up the learning process"
                 ],
-                "answer": "B) Lack of polysemous words representation"
+                "answer": "B) To prevent the gradients from becoming too large during backpropagation"
             },
             {
-                "question": "Why are polysemous words encoded ambiguously in static embeddings?",
+                "question": "Why is the softmax function applied to the scaled scores in the self-attention mechanism?",
                 "choices": [
-                    "A) Due to lack of computational power",
-                    "B) Due to lack of contextual information",
-                    "C) Due to lack of training examples",
-                    "D) Due to lack of expertise in NLP"
+                    "A) To eliminate noise in the input sequence",
+                    "B) To increase the model's accuracy",
+                    "C) To normalize the scores into a probability distribution",
+                    "D) To introduce non-linearity"
                 ],
-                "answer": "B) Due to lack of contextual information"
+                "answer": "C) To normalize the scores into a probability distribution"
             },
             {
-                "question": "What happens to static embeddings with words like 'bank' that have multiple meanings?",
+                "question": "What is the purpose of weighting the values using the attention weights in the self-attention mechanism?",
                 "choices": [
-                    "A) They are precisely represented",
-                    "B) They are ignored in the model",
-                    "C) They have ambiguous representations",
-                    "D) They are omitted from the training data"
+                    "A) To introduce sparsity in the output vectors",
+                    "B) To reduce the model's complexity",
+                    "C) To compute a weighted sum enriched with contextual information",
+                    "D) To decrease the interpretability of the word representations"
                 ],
-                "answer": "C) They have ambiguous representations"
+                "answer": "C) To compute a weighted sum enriched with contextual information"
             }
         ],
         [
             {
-                "question": "What is the purpose of the 'MAX_LENGTH = 5' line of code in the given content?",
+                "question": "What is the unique feature of masked multi-head attention in generating sequences?",
                 "choices": [
-                    "A. Set the maximum length for the input matrix",
-                    "B. Define the number of dimensions in the embedding space",
-                    "C. Establish the number of words to be embedded",
-                    "D. Specify the length for positional encoding"
+                    "A. It focuses on future information",
+                    "B. It only considers the preceding tokens",
+                    "C. It concatenates all tokens",
+                    "D. It disregards all tokens"
                 ],
-                "answer": "D. Specify the length for positional encoding"
+                "answer": "B. It only considers the preceding tokens"
             },
             {
-                "question": "How does the 'PositionalEncoder' class impact the input matrix 'input' in the given content?",
+                "question": "How does masked multi-head attention contribute to maintaining the integrity of sequential data processing?",
                 "choices": [
-                    "A. Adds random noise to the input matrix",
-                    "B. Applies a defined algorithm to the input matrix",
-                    "C. Filters out certain elements from the input matrix",
-                    "D. Sorts the input matrix in ascending order"
+                    "A. By looking at all tokens simultaneously",
+                    "B. By peeking at future information",
+                    "C. By focusing on the preceding tokens",
+                    "D. By ignoring the input sequence"
                 ],
-                "answer": "B. Applies a defined algorithm to the input matrix"
+                "answer": "C. By focusing on the preceding tokens"
             },
             {
-                "question": "Based on the provided code snippets, what is the significance of the 'ROUNDING' variable?",
+                "question": "In what way does masked multi-head attention benefit tasks like machine translation and language modeling?",
                 "choices": [
-                    "A. Determines the number of layers in the neural network",
-                    "B. Controls the precision of the floating-point values",
-                    "C. Sets the learning rate for the positional encoding algorithm",
-                    "D. Measures the computational complexity of the model"
+                    "A. By disregarding context",
+                    "B. By predictively generating tokens",
+                    "C. By ensuring logical flow and accuracy",
+                    "D. By random token selection"
                 ],
-                "answer": "B. Controls the precision of the floating-point values"
+                "answer": "C. By ensuring logical flow and accuracy"
             }
         ],
         [
             {
-                "question": "What is Bluesky?",
+                "question": "Which method is used to compute the similarity between the Query and the Key vectors?",
                 "choices": [
-                    "A. A social networking platform",
-                    "B. A publication for data science professionals",
-                    "C. A music streaming service",
-                    "D. A weather forecasting app"
+                    "A) Cosine Similarity",
+                    "B) Euclidean Distance",
+                    "C) Pearson Correlation",
+                    "D) Manhattan Distance"
                 ],
-                "answer": "B. A publication for data science professionals"
+                "answer": "A) Cosine Similarity"
             },
             {
-                "question": "What types of professionals is Bluesky primarily aimed at?",
+                "question": "What range does the Cosine Similarity value vary between?",
                 "choices": [
-                    "A. Marketing executives",
-                    "B. Data science, data analytics, data engineering, machine learning, and AI professionals",
-                    "C. Medical doctors",
-                    "D. Architects"
+                    "A) 0 to 1",
+                    "B) -1 to 1",
+                    "C) 0 to -1",
+                    "D) -1 to 0"
                 ],
-                "answer": "B. Data science, data analytics, data engineering, machine learning, and AI professionals"
+                "answer": "B) -1 to 1"
             },
             {
-                "question": "In what year was Insight Media Group, LLC established?",
+                "question": "Why do we need to convert textual data into numbers before feeding it into machine learning models?",
                 "choices": [
-                    "A. 2020",
-                    "B. 2022",
-                    "C. 2023",
-                    "D. 2025"
+                    "A) To reduce the size of data",
+                    "B) To improve model visualization",
+                    "C) To enable mathematical computations",
+                    "D) To simplify the data processing steps"
                 ],
-                "answer": "D. 2025"
+                "answer": "C) To enable mathematical computations"
             }
         ],
         [
             {
-                "question": "Which two classical methods are suggested to explore further in image segmentation?",
+                "question": "What is the purpose of the 'cls_token' in the PositionalEncoding class?",
                 "choices": [
-                    "A. Watershed Algorithm and Extraction of Connected Components",
-                    "B. Feature Extraction and Deep Learning",
-                    "C. Edge Detection and Histogram Equalization",
-                    "D. Template Matching and Optical Character Recognition"
+                    "A. To calculate the positional encoding values",
+                    "B. To add to the beginning of each embedding",
+                    "C. To expand the tokens batch",
+                    "D. To create classification tokens"
                 ],
-                "answer": "A. Watershed Algorithm and Extraction of Connected Components"
+                "answer": "B. To add to the beginning of each embedding"
             },
             {
-                "question": "Where are the images used for experiments in this post sourced from?",
+                "question": "In the 'forward' method of the PositionalEncoding class, what does 'x = x + self.pe' achieve?",
                 "choices": [
-                    "A. Unsplash.com",
-                    "B. Shutterstock.com",
-                    "C. Getty Images",
-                    "D. Pixabay.com"
+                    "A. Multiplying 'x' with positional encoding",
+                    "B. Adding class tokens to 'x'",
+                    "C. Substituting positional encoding to embeddings",
+                    "D. Adding positional encoding to embeddings"
                 ],
-                "answer": "A. Unsplash.com"
+                "answer": "D. Adding positional encoding to embeddings"
             },
             {
-                "question": "Which post should one refer to for more advanced state-of-the-art methods in image segmentation?",
+                "question": "Why is the positional encoding calculated using sine and cosine functions in the PositionalEncoding class?",
                 "choices": [
-                    "A. Watershed Algorithm and Extraction of Connected Components",
-                    "B. Clustering Based Methods",
-                    "C. Template Matching and Optical Character Recognition",
-                    "D. Edge Detection and Histogram Equalization"
+                    "A. To introduce randomness in position encoding",
+                    "B. To simplify the calculations",
+                    "C. To add diverse positional information",
+                    "D. To create learnable positional embeddings"
                 ],
-                "answer": "B. Clustering Based Methods"
+                "answer": "C. To add diverse positional information"
             }
         ],
         [
             {
-                "question": "What fundamental idea is mentioned in the text as being coupled with certain embellishments to create powerful results?",
+                "question": "Which method reduces overfitting by penalizing or adding a constraint to the loss function?",
                 "choices": [
-                    "Matrix multiplication",
-                    "Dot product",
-                    "Linear regression",
-                    "Gradient descent"
+                    "A) Gradient Descent",
+                    "B) Backpropagation",
+                    "C) Weight Regularization",
+                    "D) Activation Function"
                 ],
-                "answer": "Dot product"
+                "answer": "C) Weight Regularization"
             },
             {
-                "question": "In what field has there been tremendous progress based on Transformers in recent years?",
+                "question": "What are the two types of weight regularization represented by L1 & L2?",
                 "choices": [
-                    "Genetic engineering",
-                    "Artificial intelligence",
-                    "Quantum computing",
-                    "Biotechnology"
+                    "A) Minimize loss function & maximize error",
+                    "B) Training error & testing error",
+                    "C) Batch Gradient Descent & Stochastic Gradient Descent",
+                    "D) L1 & L2"
                 ],
-                "answer": "Artificial intelligence"
+                "answer": "D) L1 & L2"
             },
             {
-                "question": "How is the concept of 'Robtimus Prime' referenced in the text?",
+                "question": "What is the impact of having a very small training error on the overall loss of the network?",
                 "choices": [
-                    "As a symbol of technological advancement",
-                    "As a play on words related to Transformers",
-                    "As a character in a popular movie franchise",
-                    "As a coding language used in AI applications"
+                    "A) Increase the regularization term",
+                    "B) Decrease the output value of the loss function",
+                    "C) Increase the error gradient",
+                    "D) Increase the predicted vs actual error"
                 ],
-                "answer": "As a play on words related to Transformers"
+                "answer": "B) Decrease the output value of the loss function"
             }
         ],
         [
             {
-                "question": "Which of the following best describes the purpose of the datasets collection mentioned in the topic content?",
+                "question": "Which method is recommended to make the model stable without affecting data quality and privacy?",
                 "choices": [
-                    "Only used for NLP tasks",
-                    "Exclusively for training a single model",
-                    "Training models on a variety of tasks",
-                    "Developed by a single author"
+                    "A) Data augmentation",
+                    "B) Addition of noise to input data",
+                    "C) Addition of noise to output data",
+                    "D) Feature selection"
                 ],
-                "answer": "Training models on a variety of tasks"
+                "answer": "B) Addition of noise to input data"
             },
             {
-                "question": "What is the main function of the Model Hub as described in the topic content?",
+                "question": "What is the purpose of adding noise to the output data?",
                 "choices": [
-                    "Repository of outdated models",
-                    "Collection of beginner-level models",
-                    "Repository of cutting-edge models",
-                    "Repository restricted to NLP models only"
+                    "A) Make the model stable",
+                    "B) Maintain data quality and privacy",
+                    "C) Increase data diversity",
+                    "D) Reduce overfitting"
                 ],
-                "answer": "Repository of cutting-edge models"
+                "answer": "C) Increase data diversity"
             },
             {
-                "question": "In the code snippet provided, what does the 'extract_le' function do?",
+                "question": "Which method is considered less expensive and safer compared to training with more data?",
                 "choices": [
-                    "Tokenizes an input sequence to produce token IDs",
-                    "Extracts learned embeddings for each token in a sequence",
-                    "Loads a pre-trained model from a file",
-                    "Converts embeddings to tensor format"
+                    "A) Data augmentation",
+                    "B) Addition of noise to input data",
+                    "C) Addition of noise to output data",
+                    "D) Feature selection"
                 ],
-                "answer": "Extracts learned embeddings for each token in a sequence"
+                "answer": "A) Data augmentation"
             }
         ],
         [
             {
-                "question": "What is the primary function of the self-attention mechanism in text processing?",
+                "question": "What is the purpose of Queries (Q) in the context of a model's processing of a sequence?",
                 "choices": [
-                    "A. Generate static word embeddings",
-                    "B. Process each token in an input sequence simultaneously",
-                    "C. Create context-independent token representations",
-                    "D. Extract semantic information from images"
+                    "A. Represent the entire sequence",
+                    "B. Evaluate the relevance of each word in the sequence",
+                    "C. Store contextual information",
+                    "D. Determine the reference points"
                 ],
-                "answer": "B. Process each token in an input sequence simultaneously"
+                "answer": "B. Evaluate the relevance of each word in the sequence"
             },
             {
-                "question": "How do transformer embeddings differ from static word embeddings like word2vec?",
+                "question": "How do Keys (K) contribute to the model's understanding of the relationship between words in a sequence?",
                 "choices": [
-                    "A. Transformer embeddings are only used for images",
-                    "B. Transformer embeddings are context-aware and generated simultaneously for all tokens",
-                    "C. Transformer embeddings are static and not influenced by context",
-                    "D. Transformer embeddings are focused on syntactic analysis"
+                    "A. They represent the output values",
+                    "B. They compare the query vector to the key vector",
+                    "C. They generate contextual information",
+                    "D. They construct the entire sequence"
                 ],
-                "answer": "B. Transformer embeddings are context-aware and generated simultaneously for all tokens"
+                "answer": "B. They compare the query vector to the key vector"
             },
             {
-                "question": "Which significant advancements in language models have been made possible by the self-attention mechanism?",
+                "question": "Which component in the model is responsible for holding the contextual information of each word in the sequence?",
                 "choices": [
-                    "A. Development of traditional rule-based systems",
-                    "B. Creation of static language representations",
-                    "C. Enhancing the capabilities of models like BERT and GPT",
-                    "D. Restricting the processing of individual tokens"
+                    "A. Queries (Q)",
+                    "B. Keys (K)",
+                    "C. Values (V)",
+                    "D. Reference points"
                 ],
-                "answer": "C. Enhancing the capabilities of models like BERT and GPT"
+                "answer": "C. Values (V)"
             }
         ],
         [
             {
-                "question": "Which type of regularization technique aims to constrain the model's weights to be smaller or shrink some of them to 0?",
+                "question": "What is the purpose of importing numpy in the given code snippet?",
                 "choices": [
-                    "A) L3 Regularization",
-                    "B) L1 Regularization",
-                    "C) L4 Regularization",
-                    "D) L5 Regularization"
+                    "Perform mathematical operations on the data",
+                    "Visualize the data",
+                    "Train the neural network model",
+                    "Save the model weights"
                 ],
-                "answer": "B) L1 Regularization"
+                "answer": "Perform mathematical operations on the data"
             },
             {
-                "question": "In which cases are L1 and L2 regularizations used?",
+                "question": "What is the role of PatchEmbedding class in the code snippet?",
                 "choices": [
-                    "A) Cases 1 and 3",
-                    "B) Cases 2 and 4",
-                    "C) Cases 5 and 7",
-                    "D) Cases 6 and 8"
+                    "Define the neural network architecture",
+                    "Load the MNIST dataset",
+                    "Perform data augmentation",
+                    "Project image patches into a higher-dimensional space"
                 ],
-                "answer": "B) Cases 2 and 4"
+                "answer": "Project image patches into a higher-dimensional space"
             },
             {
-                "question": "What is the purpose of L1 and L2 regularization in high-variance neural networks?",
+                "question": "What does the flatten(2) operation do in the forward method of PatchEmbedding class?",
                 "choices": [
-                    "A) Increase overfitting",
-                    "B) Prevent underfitting",
-                    "C) Control bias",
-                    "D) Prevent overfitting"
+                    "Reduce the dimensionality of the data",
+                    "Calculate the gradient descent",
+                    "Normalize the output",
+                    "Reshape the tensor"
                 ],
-                "answer": "D) Prevent overfitting"
+                "answer": "Reshape the tensor"
             }
         ],
         [
             {
-                "question": "What is the purpose of the 'max_length' parameter in the transformer?",
+                "question": "What is the purpose of putting a list of encoder layers inside a sequential wrapper in a transformer?",
                 "choices": [
-                    "A. Determines the size of the query matrix",
-                    "B. Determines the size of the positional encoding matrix",
-                    "C. Sets the number of encoder layers",
-                    "D. Controls the learning rate"
+                    "A) To concatenate the encoder layers",
+                    "B) To allow for multiple encoder modules",
+                    "C) To speed up the model training process",
+                    "D) To simplify the code implementation"
                 ],
-                "answer": "B. Determines the size of the positional encoding matrix"
+                "answer": "B) To allow for multiple encoder modules"
             },
             {
-                "question": "How does the 'rounding' parameter impact the output positional encoding matrix?",
+                "question": "What is the function of the MLP classification head in a vision transformer model?",
                 "choices": [
-                    "A. Determines the number of dimensions in each row",
-                    "B. Controls the number of transformer heads",
-                    "C. Specifies the number of decimal places for rounding values",
-                    "D. Sets the batch size for training"
+                    "A) To split the image into patches",
+                    "B) To add positional encoding to the image patches",
+                    "C) To determine the classes of the images",
+                    "D) To calculate attention scores between patches"
                 ],
-                "answer": "C. Specifies the number of decimal places for rounding values"
+                "answer": "C) To determine the classes of the images"
             },
             {
-                "question": "What is the size of the output matrix generated by the 'generate_positional_encoding' function?",
+                "question": "In the forward method of the vision transformer model, what is the purpose of passing the input images through the positional encoding layer?",
                 "choices": [
-                    "A. (max_length X d_model)",
-                    "B. (max_length X max_length)",
-                    "C. (embedding_dim X embedding_dim)",
-                    "D. (d_model X d_model)"
+                    "A) To reduce the dimensionality of the input images",
+                    "B) To add a classification token to the image patches",
+                    "C) To determine the attention weights between patches",
+                    "D) To add positional information to the image patches"
                 ],
-                "answer": "A. (max_length X d_model)"
+                "answer": "D) To add positional information to the image patches"
             }
         ],
         [
             {
-                "question": "What is the value of the first element in the learned embedding vector for 'bank'?",
+                "question": "What is the purpose of splitting an image into patches in Vision Transformer (ViT)?",
                 "choices": [
-                    "A) -0.03",
-                    "B) 0.15",
-                    "C) 0.27",
-                    "D) -0.06"
+                    "A. Improve color balance",
+                    "B. Enhance resolution",
+                    "C. Capture spatial information",
+                    "D. Reduce file size"
                 ],
-                "answer": "A) -0.03"
+                "answer": "C. Capture spatial information"
             },
             {
-                "question": "Based on the transformer embedding vectors provided, which sentence has the highest value in the third element?",
+                "question": "How are patches in an image transformed into vectors in ViT?",
                 "choices": [
-                    "A) Learned embedding",
-                    "B) Transformer embedding (sentence 1)",
-                    "C) Transformer embedding (sentence 2)",
-                    "D) Cannot be determined"
+                    "A. Stacking them vertically",
+                    "B. Flattening them into vectors",
+                    "C. Rotating them clockwise",
+                    "D. Dividing them into equal parts"
                 ],
-                "answer": "C) Transformer embedding (sentence 2)"
+                "answer": "B. Flattening them into vectors"
             },
             {
-                "question": "If a new sentence embedding vector for 'bank' needs to be created using the mean of the provided transformer embeddings, what would be the value of the first element?",
+                "question": "Why is positional encoding necessary in the ViT model for processing images?",
                 "choices": [
-                    "A) 0.13",
-                    "B) 0.21",
-                    "C) 0.21",
-                    "D) -0.03"
+                    "A. To add colors to the patches",
+                    "B. To indicate patch order",
+                    "C. To apply image filters",
+                    "D. To increase image contrast"
                 ],
-                "answer": "A) 0.13"
+                "answer": "B. To indicate patch order"
             }
         ],
         [
             {
-                "question": "What are the three parts of the Softmax step in a Transformer network?",
+                "question": "What was the primary drawback of static word embeddings?",
                 "choices": [
-                    "A) Multiply, subtract, divide",
-                    "B) Raise to power, sum across columns, normalize",
-                    "C) Add, divide, round",
-                    "D) Sum, average, concatenate"
+                    "A. Lack of accuracy",
+                    "B. Limited contextual adaptability",
+                    "C. Slow processing speed",
+                    "D. Incompatibility with other models"
                 ],
-                "answer": "B) Raise to power, sum across columns, normalize"
+                "answer": "B. Limited contextual adaptability"
             },
             {
-                "question": "Why is it important to normalize each column in the Softmax step?",
+                "question": "How does self-attention differ from static embeddings in generating word representations?",
                 "choices": [
-                    "A) To decrease computational complexity",
-                    "B) To eliminate outliers",
-                    "C) To create a probability distribution of attention",
-                    "D) To reduce memory usage"
+                    "A. It uses predefined vectors",
+                    "B. It adjusts word representations based on surrounding words",
+                    "C. It ignores contextual information",
+                    "D. It generates vectors randomly"
                 ],
-                "answer": "C) To create a probability distribution of attention"
+                "answer": "B. It adjusts word representations based on surrounding words"
             },
             {
-                "question": "What is the purpose of raising e to the power of the number in each cell in the Softmax step?",
+                "question": "In what way do contextual embeddings improve the understanding of word meaning?",
                 "choices": [
-                    "A) To round the numbers",
-                    "B) To perform a power transform",
-                    "C) To calculate the Neural Network loss function",
-                    "D) To enhance the significance of the value"
+                    "A. They reduce efficiency",
+                    "B. They limit model's capabilities",
+                    "C. They adjust based on context, capturing true meaning",
+                    "D. They create static representations"
                 ],
-                "answer": "B) To perform a power transform"
+                "answer": "C. They adjust based on context, capturing true meaning"
             }
         ],
         [
             {
-                "question": "In a complete self-attention block, what is the purpose of the 'query' matrix?",
+                "question": "What is the purpose of semantic segmentation?",
                 "choices": [
-                    "A. To determine the importance of each word in the input sequence",
-                    "B. To store the information of the input sequence",
-                    "C. To compute the dot product with the key matrix",
-                    "D. To generate the final output sequence"
+                    "A) Label countable objects",
+                    "B) Label uncountable stuff",
+                    "C) Label arbitrary object classes",
+                    "D) Label complete scenes"
                 ],
-                "answer": "A. To determine the importance of each word in the input sequence"
+                "answer": "C) Label arbitrary object classes"
             },
             {
-                "question": "How does the analogy of 'query' with databases help understand its function in a self-attention block?",
+                "question": "Which segmentation technique combines both semantic and instance segmentation?",
                 "choices": [
-                    "A. By associating it with data retrieval in database systems",
-                    "B. By linking it to data storage in databases",
-                    "C. By highlighting its role in mathematical computations",
-                    "D. By emphasizing its role in data processing"
+                    "A) Panoptic segmentation",
+                    "B) Semantic segmentation",
+                    "C) Instance segmentation",
+                    "D) Complete segmentation"
                 ],
-                "answer": "A. By associating it with data retrieval in database systems"
+                "answer": "A) Panoptic segmentation"
             },
             {
-                "question": "What distinguishes the 'query' matrix from the 'key' and 'value' matrices in a self-attention block?",
+                "question": "What is the main difference between semantic and instance segmentation?",
                 "choices": [
-                    "A. Query is used for computation, while key and value are for storage",
-                    "B. Query focuses on input importance, while key and value handle outputs",
-                    "C. Key and value are interchangeable, while query is unique",
-                    "D. Query determines relevance, while key and value provide context"
+                    "A) Semantic segmentation labels countable objects",
+                    "B) Instance segmentation labels uncountable stuff",
+                    "C) Semantic segmentation labels arbitrary object classes",
+                    "D) Instance segmentation labels each single object"
                 ],
-                "answer": "D. Query determines relevance, while key and value provide context"
-            },
-            {
-                "question": "Why is it essential to have separate query, key, and value matrices in self-attention mechanisms?",
-                "choices": [
-                    "A. To simplify the algorithm and reduce computational complexity",
-                    "B. To allow for parallel processing and improved performance",
-                    "C. To facilitate different aspects of attention calculation",
-                    "D. To randomize feature extraction and enhance model diversity"
-                ],
-                "answer": "C. To facilitate different aspects of attention calculation"
-            },
-            {
-                "question": "How does understanding the analogy with databases aid in grasping the concept of self-attention?",
-                "choices": [
-                    "A. By clarifying the role of each matrix in information storage and retrieval",
-                    "B. By simplifying the mathematical operations involved in attention mechanisms",
-                    "C. By relating attention mechanisms to memory management in database systems",
-                    "D. By illustrating the impact of database design on neural network architecture"
-                ],
-                "answer": "A. By clarifying the role of each matrix in information storage and retrieval"
+                "answer": "C) Semantic segmentation labels arbitrary object classes"
             }
         ],
         [
             {
-                "question": "What method is commonly used to scale the similarity scores in the context of dot product attention?",
+                "question": "What should be passed as an argument to the model parameter in the trainer.train() function?",
                 "choices": [
-                    "A) Multiplying by a constant factor",
-                    "B) Dividing by the square root of dmodel",
-                    "C) Adding a fixed value",
-                    "D) Subtracting the mean score"
+                    "model",
+                    "training_args",
+                    "train_dataset",
+                    "tokenizer"
                 ],
-                "answer": "B) Dividing by the square root of dmodel"
+                "answer": "model"
             },
             {
-                "question": "Why is normalisation necessary for the similarity scores in dot product attention?",
+                "question": "In the inference step using the fine-tuned model, what is the role of the feature extractor?",
                 "choices": [
-                    "A) To increase the scores",
-                    "B) To decrease the computational complexity",
-                    "C) To ensure scores are negative",
-                    "D) To maintain the same scale as input tokens"
+                    "Processing the input image",
+                    "Displaying the predicted class",
+                    "Calculating the evaluation metrics",
+                    "Fine-tuning the model"
                 ],
-                "answer": "B) To decrease the computational complexity"
+                "answer": "Processing the input image"
             },
             {
-                "question": "What is the purpose of using the Softmax function when calculating attention weights in transformers?",
+                "question": "What is the purpose of the torch.no_grad() context manager in the provided code snippet?",
                 "choices": [
-                    "A) To harden the attention weights",
-                    "B) To soften the attention distribution",
-                    "C) To introduce randomness",
-                    "D) To ignore certain input tokens"
+                    "Freezing the model parameters",
+                    "Enabling gradient calculation",
+                    "Disabling gradient calculation",
+                    "Conducting model evaluation"
                 ],
-                "answer": "B) To soften the attention distribution"
+                "answer": "Disabling gradient calculation"
             }
         ]
     ]

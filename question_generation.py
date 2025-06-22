@@ -30,7 +30,7 @@ def url_finder(keywords:str)->list[str]:
     results = []
     for keyword in keyword_list:
         params = {
-        "q": f"{keyword} site:towardsdatascience.com",
+        "q": f"{keyword} site:analyticsvidhya.com OR site:kaggle.com OR site:medium.com",
         "api_key": search_api_key,
         "num": 2}
         search = GoogleSearch(params)
@@ -109,9 +109,9 @@ def question_generator(chunks:list[str])-> None:
         chain = prompt | llm | output_parser
         qa_pairs = chain.invoke({"user_prompt" : chunk})
         all_qa_pairs['qa_pairs'].append(qa_pairs['qa_pairs'])
-    # with open('interview_questions.json', 'w') as json_file:
-
-    return json.dumps(all_qa_pairs,indent=4)
+    with open('interview_questions.json', 'w') as json_file:
+        json.dump(all_qa_pairs, json_file, indent=4)
+    return 
 
 def generate_questions(keywords):
     instructions = """You are an assistant."""
