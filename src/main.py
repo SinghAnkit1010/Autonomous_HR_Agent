@@ -11,6 +11,7 @@ from fastapi.responses import JSONResponse
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 import yaml
+import pymongo
 
 config = yaml.load(open("/src/config.yaml"), Loader=yaml.FullLoader)
 
