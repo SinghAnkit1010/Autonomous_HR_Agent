@@ -12,6 +12,11 @@ import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 import yaml
 import pymongo
+import traceback
+import jwt
+import datetime
+from functools import wraps
+from fastapi import Request, HTTPException, status, Depends
 
 config = yaml.load(open("/src/config.yaml"), Loader=yaml.FullLoader)
 
@@ -47,6 +52,59 @@ class jd_data(BaseModel):
     experience : int
     education : str
     link : str
+
+def authentication_required(request: Request):
+    auth_header = request.headers.get('Authorization')
+    if not auth_header or len(auth_header.split()) != 2:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Bad authorization header')
+    bearer_token = auth_header.split()[1]
+    try:
+        data = jwt.decode(bearer_token, config['secret_key'], algorithms=["HS256"])
+    except Exception as e:
+        print('Error: ', e, flush=True)
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail=str(e))
+    if not data:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail='Invalid token')
+    return data
+
+def get_user(request):
+    try:
+        auth_header = request.headers.get('Authorization')
+        if auth_header:
+            auth_token_arr = auth_header.split(" ")
+            if len(auth_token_arr) == 2:
+                auth_token = auth_token_arr[1]
+                data = jwt.decode(auth_token, config['secret_key'], algorithms=["HS256"])
+                if data:
+                    email = data.get('email')
+                    if email:
+                        user = users_db['users'].find_one({'email': email})
+                        if user:
+                            user_data = {
+                                '_id': str(user.get('_id')),
+                                'username': user.get('username', ''),
+                                'email': user.get('email', ''),
+                                'password': user.get('password', ''),
+                            }
+                            return user_data
+                        else:
+                            print('User not found', flush=True)
+                            return None
+                    else:
+                        print('Email not found in token', flush=True)
+                        return None
+    except Exception as e:
+        print('Error: ', e, flush=True)
+        return None
+
+
+# @app.get('/check_auth')
+# def check_auth2(user_data: dict = Depends(authentication_required)):
+#     return {"message": "Hello, FastAPI!", "user": user_data}
+
+@app.get('/check_auth')
+def check_auth2(dep=Depends(authentication_required)):
+    return {"message": "Hello, FastAPI!"}
 
 @app.get("/")
 def func():
