@@ -11,69 +11,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# COPY requirements.txt .
-# RUN pip install --no-cache-dir -r requirements.txt
-
-# RUN pip install --no-cache-dir \
-#     charset-normalizer==3.4.1 \
-#     fastapi==0.115.12 \
-#     google-api-core==2.24.2 \
-#     google-api-python-client==2.170.0 \
-#     google-auth==2.40.2 \
-#     google-auth-httplib2==0.2.0 \
-#     google-auth-oauthlib==1.2.2 \
-#     google-cloud-core==2.4.3 \
-#     google-search-results==2.4.2 \
-#     httpcore==1.0.7 \
-#     httplib2==0.22.0 \
-#     httpx==0.28.1 \
-#     httpx-sse==0.4.0 \
-#     huggingface-hub==0.29.1 \
-#     langchain==0.3.25 \
-#     langchain-community==0.3.24 \
-#     langchain-core==0.3.63 \
-#     langchain-experimental==0.3.4 \
-#     langchain-google-community==2.0.7 \
-#     langchain-openai==0.3.7 \
-#     langchain-text-splitters==0.3.8 \
-#     langgraph-prebuilt==0.2.2 \
-#     langgraph-sdk==0.1.70 \
-#     numpy==2.2.3 \
-#     oauthlib==3.2.2 \
-#     openai==1.64.0 \
-#     ormsgpack==1.10.0 \
-#     packaging==24.2 \
-#     pandas==2.2.3 \
-#     pydantic==2.10.6 \
-#     pydantic-settings==2.8.1 \
-#     pypdf==5.4.0 \
-#     python-dateutil==2.9.0.post0 \
-#     python-dotenv==1.0.1 \
-#     python-multipart==0.0.20 \
-#     pytz==2025.1 \
-#     PyYAML==6.0.2 \
-#     regex==2024.11.6 \
-#     requests==2.32.3 \
-#     requests-oauthlib==2.0.0 \
-#     rsa==4.9.1 \
-#     scikit-learn==1.6.1 \
-#     scipy==1.15.2 \
-#     torch==2.1.2 \
-#     torchvision==0.16.2 \
-#     torchaudio==2.1.2 \
-#     sentence-transformers==3.4.1 \
-#     starlette==0.46.2 \
-#     transformers==4.49.0 \
-#     uritemplate==4.1.1 \
-#     urllib3==2.3.0 \
-#     uvicorn==0.34.3 \
-#     Werkzeug==3.1.3 \
-#     pymongo==4.13.2 \
-#     bcrypt \
-#     pyjwt \
-#     pem \
-#     pyjwt[crypto]
-
 RUN python3.11 -m pip install charset-normalizer==3.4.1
 RUN python3.11 -m pip install fastapi==0.115.12
 RUN python3.11 -m pip install google-api-core==2.24.2
