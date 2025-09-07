@@ -17,7 +17,7 @@ Automates job description creation, LinkedIn posting, resume collection & shortl
 
 ## Dependencies
 
-```txt
+txt
 LangGraph
 fastapi
 boto3
@@ -25,12 +25,15 @@ pydantic
 Docker
 beautifulsoup4
 
-## ☁️ AWS Setup
+---
 
-- **S3 Bucket**: `hr-agent-resume9408` → stores resumes
+## AWS Setup 
+
+- **S3 Bucket**: `hr-agent-resume` → stores resumes
 
 - **DynamoDB Tables**:
   - `LinkedinAuth` ->    stores company ID and their credentials
   - `JobDescriptions` -> stores job descriptions and metadata
   - `candidates_table` -> stores candidate information and resume links
+  - **EC2 Instance**: ([http://54.236.15.84:8000/])
 
