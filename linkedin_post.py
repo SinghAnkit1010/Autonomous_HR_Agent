@@ -4,6 +4,7 @@ import os
 import requests
 import json
 import re
+import boto3
 
 
 
@@ -12,6 +13,10 @@ load_dotenv()
 # urn = get_linkedin_profile_urn(access_token)
 # vivek_urn = "urn:li:person:vRCd087SCJ"
 # vivek_access_token = "AQV2h7yj1zbo9HFCfr7TVy3Hc5tvde7DsU735szMGgVVOOAtjonjkAlBkQ8B6yv1gUsPtfuW5nofWRLw7P4KwAiDVcFYu-ANuHp8al_E-Am2uIwK8nIGykTdvBHJXt54QzRmOqzQQKHpref_mUYvz0eB_asevzj08TVh9NGzn02gx56qAyKPyjXFWkMTp-FYR-tTIf3daE6nPdepN0L1g3F-bA2jRA_9y8SGAxxMvUCBgSWktwfJc7tgIXN51XlNtebJCfD0O-kGrWC2R53iax9ea38kJzE9SbfuIr5WglA4Py-pxuyeT1ToIzpmqFQNLc1WC5uEN3_y9dR2iPjxnAEyV0fTsg"
+
+dynamo = boto3.resource('dynamodb', region_name='us-east-1')
+auth_table = dynamo.Table('LinkedInAuth')
+jd_table = dynamo.Table('JobDescriptions')
 
 def format_for_linkedin_post(raw_jd: str) -> str:
     """
@@ -42,11 +47,26 @@ def format_for_linkedin_post(raw_jd: str) -> str:
     return text
 
 
-def post_jd_on_linkedin(text: str,access_token: str, urn: str):
+def post_jd_on_linkedin(jd_id: str, company_id: str):
     '''This function will post given text on linkedin on behalf of user whose access token and urn is provided.'''
+
+#   fetcing linkedin credentials from dynamodb
+    response = auth_table.get_item(Key={"company_id": company_id})
+    if 'Item' not in response:
+        raise Exception("No LinkedIn auth data found for this company_id.")
+
+    access_token = response['Item'].get("access_token")
+    urn = response['Item'].get("organization_urn")
+
+#  fetching job description from dynamodb
+    jd_response = jd_table.get_item(Key={"jd_id": jd_id})
+    if 'Item' not in jd_response:
+        raise Exception("No Job Description found for this jd_id.")
+    text = jd_response['Item'].get("job_description")
     
     text = format_for_linkedin_post(text)
     url = "https://api.linkedin.com/v2/ugcPosts"
+
 
     headers = {
         "Authorization": f"Bearer {access_token}",

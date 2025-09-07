@@ -4,20 +4,27 @@ import httpx
 import urllib.parse 
 from dotenv import load_dotenv
 import requests
+import boto3
 
 
 load_dotenv()
 router = APIRouter()
 
+dynamo = boto3.resource('dynamodb', region_name='us-east-1')
+auth_table = dynamo.Table('LinkedInAuth')
+
 LINKEDIN_AUTH_BASE = "https://www.linkedin.com/oauth/v2/authorization"
 LINKEDIN_TOKEN_URL = "https://www.linkedin.com/oauth/v2/accessToken"
 LINKEDIN_URN_URL = "https://api.linkedin.com/v2/userinfo"
 
-def store_in_db(company_name, access_token, org_urn):
+def store_in_db(company_id, access_token, org_urn):
+    item = {
+        "company_id": company_id,
+        "access_token": access_token,
+        "organization_urn": org_urn
+    }
+    auth_table.put_item(Item=item)
     print("✅ SAVED TO DB:")
-    print(f"Company: {company_name}")
-    print(f"Access Token: {access_token[:5]}... (hidden)")
-    print(f"Organization URN: {org_urn}")
 
 def get_linkedin_profile_urn(access_token: str):
     url = "https://api.linkedin.com/v2/userinfo"
@@ -87,4 +94,3 @@ async def linkedin_callback(request:Request):
             "message": f"Access token stored for {email}",
             "org_urn": org_urn
         }
-
