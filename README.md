@@ -6,10 +6,10 @@ Automates job description creation, LinkedIn posting, resume collection & shortl
 ---
 
 ## Features
-- Create Job Descriptions dynamically with AI
+- Create Job Descriptions dynamically with AI and save in DynamoDB with unique job ID
 - Post JD on LinkedIn automatically on behalf of company(With their URN)
 - Store resumes in S3 and metadata in DynamoDB
-- Select top candidates based on JD and resumes
+- Select top candidates based on JD and resumes and send them emails
 - Generate interview questions using AI
 - Dockerized for easy deployment
 
@@ -24,3 +24,13 @@ boto3
 pydantic
 Docker
 beautifulsoup4
+
+## ☁️ AWS Setup
+
+- **S3 Bucket**: `hr-agent-resume9408` → stores resumes
+
+- **DynamoDB Tables**:
+  - `LinkedinAuth` ->    stores company ID and their credentials
+  - `JobDescriptions` -> stores job descriptions and metadata
+  - `candidates_table` -> stores candidate information and resume links
+
