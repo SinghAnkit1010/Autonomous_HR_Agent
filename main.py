@@ -7,7 +7,7 @@ from langchain_core.messages import HumanMessage
 from dotenv import load_dotenv
 from create_jd import jd_create
 from linkedin_post import post_jd_on_linkedin
-from interview_questions import question_generator_agent
+from question_generation import question_generator_agent
 from resume_selection import resume_selection_agent
 from linkedin_auth import router as linkedin_router
 from fastapi.responses import JSONResponse
@@ -17,6 +17,7 @@ from datetime import datetime
 import bs4
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
+import os
 
 
 load_dotenv()
