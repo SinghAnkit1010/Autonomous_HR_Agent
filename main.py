@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from fastapi import UploadFile, File, Form
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from langchain_core.messages import HumanMessage
 from dotenv import load_dotenv
@@ -21,6 +22,13 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 load_dotenv()
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[os.getenv("FRONTEND_URL_DEVELOPMENT"), os.getenv("FRONTEND_URL_PRODUCTION")],  # Frontend origin
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 app.include_router(linkedin_router)
 
 class KeywordRequest(BaseModel):
